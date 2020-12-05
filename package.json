@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "mock:build": "axios-mock-server -b",
-    "mock": "./node_modules/json-server/lib/cli/bin.js --watch ../mock/json-server/api.json -p 3001 -m ../mock/json-server/middleware/proxy.js"
+    "mock-stable": "./node_modules/json-server/lib/cli/bin.js --watch ../mock/json-server/api.json -p 3001 -m ../mock/json-server/middleware/proxy.js",
+    "mock": "./node_modules/json-server/lib/cli/bin.js --watch ../mock/json-server/api.json -p 3001"
   },
   "dependencies": {
     "@vue/test-utils": "^1.1.1",
