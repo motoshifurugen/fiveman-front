@@ -1,24 +1,10 @@
 # やっほー隊Webサイト（フロントリポジトリ）
 
-## Project setup
+## 起動方法
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+cd fiveman-app
+npm run serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 使用フレームワーク
+・[Vuetify](https://vuetifyjs.com/ja/)
