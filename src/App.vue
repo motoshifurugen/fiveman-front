@@ -9,9 +9,12 @@
                     <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
                     </template>
                     <v-list>
-                        <v-list-item v-for="page in menu" :key="page">
+                        <v-list-item v-for="page in menu" :key="page.name">
+                            <v-list-item-icon>
+                                <v-icon>{{ page.icon }}</v-icon>
+                            </v-list-item-icon>
                             <v-list-item-content>
-                                <v-list-item-title>{{ page }}</v-list-item-title>
+                                <v-list-item-title>{{ page.name }}</v-list-item-title>
                             </v-list-item-content>
                         </v-list-item>
                     </v-list>
@@ -31,6 +34,7 @@ export default {
         menu:[
             {name: 'やっほー隊', icon: 'mdi-rocket-launch'},
             {name: 'メンバー', icon: 'mdi-account-group'},
+            {name: 'ニュース', icon: 'mdi-bullhorn'},
             {name: 'お問い合わせ', icon: 'mdi-email'}
         ]
     }
