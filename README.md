@@ -1,9 +1,11 @@
 # やっほー隊Webサイト（フロントリポジトリ）
 
+パッケージマネージャーはyarnを使用。
+
 ## 起動方法
 ```
 cd fiveman-app
-npm run serve
+yarn serve
 ```
 
 ## 使用フレームワーク
