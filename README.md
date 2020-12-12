@@ -1,4 +1,4 @@
-# fiveman-app
+# やっほー隊Webサイト（フロントリポジトリ）
 
 ## Project setup
 ```
