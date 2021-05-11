@@ -1,0 +1,1 @@
+// Vue routerで使用

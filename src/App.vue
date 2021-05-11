@@ -1,60 +1,43 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+    <v-app>
+        <v-app-bar color="teal" dark app clipped-left>
+            <v-toolbar-title>ヘッダー</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+                <v-menu offset-y>
+                    <template v-slot:activator="{on}">
+                    <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
+                    </template>
+                    <v-list>
+                        <v-list-item v-for="page in menu" :key="page.name">
+                            <v-list-item-icon>
+                                <v-icon>{{ page.icon }}</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>{{ page.name }}</v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
+                </v-toolbar-items>
+        </v-app-bar>
+        <v-footer color="teal" dark app>
+            footer
+        </v-footer>
+    </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+    data(){
+    return{
+        menu:[
+            {name: 'やっほー隊', icon: 'mdi-rocket-launch'},
+            {name: 'メンバー', icon: 'mdi-account-group'},
+            {name: 'ニュース', icon: 'mdi-bullhorn'},
+            {name: 'お問い合わせ', icon: 'mdi-email'}
+        ]
+    }
+  }
 };
 </script>
